@@ -27,8 +27,8 @@ class BottomNavController extends StateNotifier<int> {
   }
 }
 
-class BottomNavigationWidget extends ConsumerWidget {
-  const BottomNavigationWidget({super.key});
+class LandingNavigation extends ConsumerWidget {
+  const LandingNavigation({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

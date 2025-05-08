@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/landing_navigation.dart';
 
 import '/main.dart';
-import 'bottom_navigation_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
-      bottomNavigationBar: BottomNavigationWidget(),
+      bottomNavigationBar: LandingNavigation(),
     );
   }
 }

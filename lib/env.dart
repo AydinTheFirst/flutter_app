@@ -1,17 +1,17 @@
 import 'package:flutter/foundation.dart';
 
-enum Environment { dev, relase }
+enum Environment { dev, release }
 
 class EnvConfig {
   static Environment get current =>
-      kReleaseMode ? Environment.relase : Environment.dev;
+      kReleaseMode ? Environment.release : Environment.dev;
 
   static String get baseUrl {
     switch (current) {
       case Environment.dev:
-        return 'https://camlica-pts.riteknoloji.com/api';
-      case Environment.relase:
-        return 'https://camlica-pts.riteknoloji.com/api';
+        return 'https://jsonplaceholder.typicode.com';
+      case Environment.release:
+        return 'https://jsonplaceholder.typicode.com';
     }
   }
 }

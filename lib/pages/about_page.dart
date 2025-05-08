@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'bottom_navigation_widget.dart';
+import 'package:flutter_app/pages/landing_navigation.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
@@ -26,7 +26,7 @@ class AboutPage extends StatelessWidget {
         child: const Icon(Icons.add),
       ),
 
-      bottomNavigationBar: BottomNavigationWidget(),
+      bottomNavigationBar: LandingNavigation(),
     );
   }
 }

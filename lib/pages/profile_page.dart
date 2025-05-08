@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/bottom_navigation_widget.dart';
+import 'package:flutter_app/pages/landing_navigation.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -35,7 +34,7 @@ class ProfilePage extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationWidget(),
+      bottomNavigationBar: LandingNavigation(),
     );
   }
 }

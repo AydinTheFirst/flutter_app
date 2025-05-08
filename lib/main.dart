@@ -1,12 +1,13 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/constants/theme_constants.dart';
 import 'package:get/route_manager.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:logger/logger.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'router.dart';
+import 'routes.dart';
 
 final storage = GetStorage();
 final Logger logger = Logger();
@@ -52,8 +53,15 @@ class _MyAppState extends State<MyApp> {
     return GetMaterialApp(
       title: 'Flutter App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blue,
+          primary: Colors.blue,
+          secondary: Colors.blueAccent,
+        ),
         textTheme: GoogleFonts.poppinsTextTheme(),
+        appBarTheme: ThemeConstants().appBarTheme,
+        bottomNavigationBarTheme: ThemeConstants().bottomNavigationBarTheme,
+        scaffoldBackgroundColor: Colors.white,
       ),
       initialRoute: lastRoute,
       getPages: appRoutes,
